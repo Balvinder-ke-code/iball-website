@@ -25,8 +25,8 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-morphism" data-testid="navigation">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 glass-morphism rounded-full px-6" data-testid="navigation">
+      <div className="max-w-4xl mx-auto px-2 lg:px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -55,7 +55,7 @@ export default function Navigation() {
         </div>
         
         {/* Mobile Menu */}
-        <div className={`md:hidden mobile-menu glass-morphism absolute top-16 left-0 w-full ${isMobileMenuOpen ? 'open' : ''}`}>
+        <div className={`md:hidden mobile-menu glass-morphism absolute top-20 left-1/2 transform -translate-x-1/2 w-80 rounded-2xl ${isMobileMenuOpen ? 'open' : ''}`}>
           <div className="flex flex-col space-y-4 p-6">
             <a href="#home" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-home">Home</a>
             <a href="#about" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-about">About</a>
