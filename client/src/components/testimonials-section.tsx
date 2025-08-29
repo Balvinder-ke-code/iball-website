@@ -3,37 +3,37 @@ export default function TestimonialsSection() {
     {
       name: "Alex Martinez",
       role: "YouTuber",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       comment: "iBall transformed my channel with incredible thumbnails. My click-through rates increased by 40% within the first month!"
     },
     {
       name: "Sarah Johnson",
       role: "Content Creator",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       comment: "Working with iBall has been amazing. The profile pictures they created perfectly captured my brand and helped me stand out."
     },
     {
       name: "Mike Thompson",
       role: "Event Organizer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+      image: "https://pixabay.com/get/g5bbd268703585f807ff48dd4607608554841d1b00877a41de64f334690e8a1a577005b697799dac4b01e2786b123f1d1865a792069b4a49a96449139bc51e5bc_1280.jpg",
       comment: "The poster designs for our events were absolutely stunning. Professional quality that made our events look premium and attracted huge crowds."
     },
     {
       name: "Emma Davis",
       role: "Influencer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       comment: "iBall's design work is exceptional. They understood my vision perfectly and delivered designs that exceeded my expectations."
     },
     {
       name: "David Rodriguez",
       role: "Business Owner",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       comment: "Fast turnaround, excellent communication, and outstanding results. iBall helped elevate our brand with professional graphics."
     },
     {
       name: "Lisa Chen",
       role: "Podcaster",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
       comment: "Creative, professional, and reliable. iBall's designs helped my podcast gain thousands of new subscribers. Highly recommended!"
     }
   ];
@@ -48,29 +48,33 @@ export default function TestimonialsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="fade-in glass-morphism p-6 rounded-2xl" data-testid={`testimonial-card-${index}`}>
-              <div className="flex flex-col items-center text-center">
+        <div className="overflow-x-auto pb-4">
+          <div className="flex space-x-6" style={{ width: 'max-content' }}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="fade-in glass-morphism rounded-2xl overflow-hidden flex-shrink-0 w-80" data-testid={`testimonial-card-${index}`}>
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name} 
-                  className="w-16 h-16 rounded-full object-cover mb-4 border-2 border-accent"
+                  className="w-full h-48 object-cover"
                   data-testid={`testimonial-image-${index}`}
                 />
-                <h3 className="text-lg font-semibold mb-1" data-testid={`testimonial-name-${index}`}>{testimonial.name}</h3>
-                <p className="text-accent text-sm mb-4" data-testid={`testimonial-role-${index}`}>{testimonial.role}</p>
-                <p className="text-muted-foreground leading-relaxed" data-testid={`testimonial-comment-${index}`}>
-                  "{testimonial.comment}"
-                </p>
-                <div className="flex mt-4">
-                  {Array.from({ length: 5 }, (_, starIndex) => (
-                    <i key={starIndex} className="fas fa-star text-accent text-sm"></i>
-                  ))}
+                <div className="p-6">
+                  <div className="flex items-center mb-3">
+                    <h3 className="text-lg font-semibold mr-2" data-testid={`testimonial-name-${index}`}>{testimonial.name}</h3>
+                    <span className="text-accent text-sm" data-testid={`testimonial-role-${index}`}>• {testimonial.role}</span>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed mb-4" data-testid={`testimonial-comment-${index}`}>
+                    "{testimonial.comment}"
+                  </p>
+                  <div className="flex">
+                    {Array.from({ length: 5 }, (_, starIndex) => (
+                      <i key={starIndex} className="fas fa-star text-accent text-sm"></i>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
