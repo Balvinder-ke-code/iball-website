@@ -36,7 +36,6 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <AboutSection />
-      <SkillsSection />
       <PortfolioSection />
       <ContactSection />
       <Footer />

@@ -32,7 +32,6 @@ export default function Navigation() {
           <div className="hidden md:flex space-x-8">
             <a href="#home" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-home">Home</a>
             <a href="#about" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-about">About</a>
-            <a href="#skills" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-skills">Skills</a>
             <a href="#portfolio" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-portfolio">Portfolio</a>
             <a href="#contact" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-contact">Contact</a>
           </div>
@@ -54,7 +53,6 @@ export default function Navigation() {
           <div className="flex flex-col space-y-4 p-6">
             <a href="#home" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-home">Home</a>
             <a href="#about" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-about">About</a>
-            <a href="#skills" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-skills">Skills</a>
             <a href="#portfolio" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-portfolio">Portfolio</a>
             <a href="#contact" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-contact">Contact</a>
           </div>
