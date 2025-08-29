@@ -27,12 +27,7 @@ export default function Navigation() {
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 glass-morphism rounded-full px-6" data-testid="navigation">
       <div className="max-w-4xl mx-auto px-2 lg:px-4">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <span className="text-2xl font-bold gradient-text" data-testid="logo">iBall</span>
-          </div>
-          
+        <div className="flex justify-center items-center h-16">
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             <a href="#home" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-home">Home</a>
