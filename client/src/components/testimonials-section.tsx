@@ -1,4 +1,25 @@
+import { useRef } from "react";
+
 export default function TestimonialsSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: -320,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: 320,
+        behavior: 'smooth'
+      });
+    }
+  };
   const testimonials = [
     {
       name: "Alex Martinez",
@@ -48,32 +69,57 @@ export default function TestimonialsSection() {
           </p>
         </div>
         
-        <div className="overflow-x-auto pb-4">
-          <div className="flex space-x-6" style={{ width: 'max-content' }}>
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="fade-in glass-morphism rounded-2xl overflow-hidden flex-shrink-0 w-80" data-testid={`testimonial-card-${index}`}>
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name} 
-                  className="w-full h-48 object-cover"
-                  data-testid={`testimonial-image-${index}`}
-                />
-                <div className="p-6">
-                  <div className="flex items-center mb-3">
-                    <h3 className="text-lg font-semibold mr-2" data-testid={`testimonial-name-${index}`}>{testimonial.name}</h3>
-                    <span className="text-accent text-sm" data-testid={`testimonial-role-${index}`}>• {testimonial.role}</span>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed mb-4" data-testid={`testimonial-comment-${index}`}>
-                    "{testimonial.comment}"
-                  </p>
-                  <div className="flex">
-                    {Array.from({ length: 5 }, (_, starIndex) => (
-                      <i key={starIndex} className="fas fa-star text-accent text-sm"></i>
-                    ))}
+        <div className="relative">
+          {/* Left Arrow */}
+          <button 
+            onClick={scrollLeft}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-colors"
+            data-testid="scroll-left-button"
+          >
+            <i className="fas fa-chevron-left text-primary-foreground"></i>
+          </button>
+
+          {/* Right Arrow */}
+          <button 
+            onClick={scrollRight}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-colors"
+            data-testid="scroll-right-button"
+          >
+            <i className="fas fa-chevron-right text-primary-foreground"></i>
+          </button>
+
+          {/* Scrollable Container */}
+          <div 
+            ref={scrollRef}
+            className="overflow-x-hidden pb-4"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            <div className="flex space-x-6 px-16" style={{ width: 'max-content' }}>
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="fade-in glass-morphism rounded-2xl overflow-hidden flex-shrink-0 w-80" data-testid={`testimonial-card-${index}`}>
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name} 
+                    className="w-full h-48 object-cover"
+                    data-testid={`testimonial-image-${index}`}
+                  />
+                  <div className="p-6">
+                    <div className="flex items-center mb-3">
+                      <h3 className="text-lg font-semibold mr-2" data-testid={`testimonial-name-${index}`}>{testimonial.name}</h3>
+                      <span className="text-accent text-sm" data-testid={`testimonial-role-${index}`}>• {testimonial.role}</span>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed mb-4" data-testid={`testimonial-comment-${index}`}>
+                      "{testimonial.comment}"
+                    </p>
+                    <div className="flex">
+                      {Array.from({ length: 5 }, (_, starIndex) => (
+                        <i key={starIndex} className="fas fa-star text-accent text-sm"></i>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

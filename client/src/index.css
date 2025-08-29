@@ -122,4 +122,9 @@
   .mobile-menu.open {
     transform: translateY(0);
   }
+
+  /* Hide scrollbars completely */
+  .overflow-x-hidden::-webkit-scrollbar {
+    display: none;
+  }
 }
