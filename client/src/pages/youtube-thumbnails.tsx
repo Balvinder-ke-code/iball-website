@@ -7,10 +7,16 @@ export default function YoutubeThumbnails() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Handle back navigation with scroll restoration
-  const handleBackClick = () => {
-    // Let the navigation happen naturally, scroll position will be restored by PortfolioSection
-  };
+  // Array of your thumbnails (replace with your actual image filenames)
+  const thumbnails = [
+    "/images/thumbnails/thumb1.jpg",
+    "/images/thumbnails/thumb2.jpg",
+    "/images/thumbnails/thumb3.jpg",
+    "/images/thumbnails/thumb4.jpg",
+    "/images/thumbnails/thumb5.jpg",
+    "/images/thumbnails/thumb6.jpg",
+  ];
+
   return (
     <div className="min-h-screen pt-24 pb-12 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -19,7 +25,6 @@ export default function YoutubeThumbnails() {
           <Link
             href="/"
             className="text-accent hover:text-accent/80 mb-4 inline-flex items-center"
-            onClick={handleBackClick}
           >
             <i className="fas fa-arrow-left mr-2"></i>
             Back to Portfolio
@@ -38,21 +43,16 @@ export default function YoutubeThumbnails() {
 
         {/* Image Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {Array.from({ length: 6 }, (_, index) => (
+          {thumbnails.map((src, index) => (
             <div
               key={index}
               className="glass-morphism rounded-2xl overflow-hidden group"
-              data-testid={`thumbnail-placeholder-${index}`}
             >
-              <div className="aspect-video bg-secondary flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
-                <div className="text-center">
-                  <i className="fas fa-image text-4xl text-muted-foreground mb-2"></i>
-                  <p className="text-muted-foreground">Thumbnail {index + 1}</p>
-                  <p className="text-sm text-muted-foreground/70">
-                    Click to upload
-                  </p>
-                </div>
-              </div>
+              <img
+                src={src}
+                alt={`Thumbnail ${index + 1}`}
+                className="w-full h-auto aspect-video object-cover"
+              />
               <div className="p-4">
                 <h3 className="font-semibold text-lg mb-2">
                   Thumbnail Design {index + 1}
@@ -64,25 +64,6 @@ export default function YoutubeThumbnails() {
             </div>
           ))}
         </div>
-
-        {/* Upload Section */}
-        {/* <div className="glass-morphism rounded-2xl p-8 text-center">
-          <div className="max-w-md mx-auto">
-            <i className="fas fa-cloud-upload-alt text-5xl text-accent mb-4"></i>
-            <h3 className="text-2xl font-semibold mb-4">
-              Upload New Thumbnails
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Drag and drop your thumbnail designs here or click to browse
-            </p>
-            <button
-              className="gradient-button px-8 py-4 rounded-full text-primary-foreground font-semibold shadow-lg"
-              data-testid="button-upload"
-            >
-              Choose Files
-            </button>
-          </div>
-        </div> */}
       </div>
     </div>
   );
