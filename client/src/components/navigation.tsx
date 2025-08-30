@@ -36,29 +36,57 @@ export default function Navigation() {
         <i className={`fas ${isHeaderVisible ? 'fa-times' : 'fa-bars'} text-primary-foreground transition-all duration-300 ${isHeaderVisible ? 'rotate-180' : 'rotate-0'}`}></i>
       </button>
       
-      <nav className={`fixed top-2 sm:top-4 left-1/2 transform -translate-x-1/2 z-40 glass-morphism rounded-full px-4 sm:px-6 w-[95%] md:w-auto transition-all duration-500 ease-in-out ${isHeaderVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-4 scale-95 pointer-events-none'} md:opacity-100 md:translate-y-0 md:scale-100 md:pointer-events-auto`} data-testid="navigation">
-        <div className="mx-auto px-2 md:px-6">
-          <div className="flex justify-center items-center h-12 sm:h-16">
-            {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-6">
+      {/* Desktop Navigation */}
+      <nav className="hidden md:block fixed top-2 sm:top-4 left-1/2 transform -translate-x-1/2 z-40 glass-morphism rounded-full px-4 sm:px-6 w-auto" data-testid="navigation">
+        <div className="mx-auto px-6">
+          <div className="flex justify-center items-center h-16">
+            <div className="flex space-x-6">
               <a href="#home" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-home">Home</a>
               <a href="#about" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-about">About</a>
               <a href="#portfolio" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-portfolio">My Work</a>
               <a href="#contact" className="text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="nav-contact">Contact</a>
             </div>
-            
-            {/* Mobile Menu */}
-            <div className="md:hidden w-full">
-              <div className={`flex flex-col space-y-4 py-4 px-2 transition-all duration-500 ${isHeaderVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-2'}`}>
-                <a href="#home" className={`block text-center py-3 px-4 text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300 ${isHeaderVisible ? 'animate-fadeInUp delay-100' : ''}`} data-testid="mobile-nav-home">Home</a>
-                <a href="#about" className={`block text-center py-3 px-4 text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300 ${isHeaderVisible ? 'animate-fadeInUp delay-200' : ''}`} data-testid="mobile-nav-about">About</a>
-                <a href="#portfolio" className={`block text-center py-3 px-4 text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300 ${isHeaderVisible ? 'animate-fadeInUp delay-300' : ''}`} data-testid="mobile-nav-portfolio">My Work</a>
-                <a href="#contact" className={`block text-center py-3 px-4 text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300 ${isHeaderVisible ? 'animate-fadeInUp delay-400' : ''}`} data-testid="mobile-nav-contact">Contact</a>
-              </div>
-            </div>
           </div>
         </div>
       </nav>
+      
+      {/* Mobile Side Menu */}
+      <div className={`md:hidden fixed inset-0 z-30 transition-all duration-500 ease-in-out ${isHeaderVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        {/* Backdrop */}
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsHeaderVisible(false)}></div>
+        
+        {/* Menu Panel */}
+        <div className={`absolute top-0 left-0 h-full w-80 max-w-[85vw] glass-morphism transition-transform duration-500 ease-out ${isHeaderVisible ? 'translate-x-0' : '-translate-x-full'}`}>
+          <div className="flex flex-col h-full">
+            {/* Menu Header */}
+            <div className="flex items-center justify-between p-6 border-b border-border/20">
+              <h2 className="text-2xl font-bold gradient-text">iBall</h2>
+            </div>
+            
+            {/* Menu Items */}
+            <div className="flex-1 px-6 py-8">
+              <nav className="space-y-2">
+                <a href="#home" className={`block py-4 px-4 text-left text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300 ${isHeaderVisible ? 'animate-slideInLeft delay-100' : ''}`} data-testid="mobile-nav-home">
+                  <i className="fas fa-home w-6 mr-3"></i>
+                  Home
+                </a>
+                <a href="#about" className={`block py-4 px-4 text-left text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300 ${isHeaderVisible ? 'animate-slideInLeft delay-200' : ''}`} data-testid="mobile-nav-about">
+                  <i className="fas fa-user w-6 mr-3"></i>
+                  About
+                </a>
+                <a href="#portfolio" className={`block py-4 px-4 text-left text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300 ${isHeaderVisible ? 'animate-slideInLeft delay-300' : ''}`} data-testid="mobile-nav-portfolio">
+                  <i className="fas fa-briefcase w-6 mr-3"></i>
+                  My Work
+                </a>
+                <a href="#contact" className={`block py-4 px-4 text-left text-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300 ${isHeaderVisible ? 'animate-slideInLeft delay-400' : ''}`} data-testid="mobile-nav-contact">
+                  <i className="fas fa-envelope w-6 mr-3"></i>
+                  Contact
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
