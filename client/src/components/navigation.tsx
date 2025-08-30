@@ -49,11 +49,11 @@ export default function Navigation() {
           
           {/* Mobile Menu */}
           <div className="md:hidden w-full">
-            <div className="flex flex-col space-y-3 py-2">
-              <a href="#home" className="text-center text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-home">Home</a>
-              <a href="#about" className="text-center text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-about">About</a>
-              <a href="#portfolio" className="text-center text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-portfolio">My Work</a>
-              <a href="#contact" className="text-center text-muted-foreground hover:text-accent transition-colors duration-300" data-testid="mobile-nav-contact">Contact</a>
+            <div className="flex flex-col space-y-4 py-4 px-2">
+              <a href="#home" className="block text-center py-3 px-4 text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300" data-testid="mobile-nav-home">Home</a>
+              <a href="#about" className="block text-center py-3 px-4 text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300" data-testid="mobile-nav-about">About</a>
+              <a href="#portfolio" className="block text-center py-3 px-4 text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300" data-testid="mobile-nav-portfolio">My Work</a>
+              <a href="#contact" className="block text-center py-3 px-4 text-muted-foreground hover:text-accent hover:bg-accent/10 rounded-lg transition-all duration-300" data-testid="mobile-nav-contact">Contact</a>
             </div>
           </div>
         </div>
