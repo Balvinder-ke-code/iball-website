@@ -76,6 +76,7 @@
     "zod-validation-error": "^3.4.0"
   },
   "devDependencies": {
+    "@vercel/node": "^3.2.7",
     "@types/nodemailer": "^6.4.15",
     "@replit/vite-plugin-cartographer": "^0.3.0",
     "@replit/vite-plugin-runtime-error-modal": "^0.0.3",
