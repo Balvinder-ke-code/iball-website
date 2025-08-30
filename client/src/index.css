@@ -78,6 +78,33 @@
     transform: translateY(-2px);
     box-shadow: 0 20px 40px rgba(255, 95, 31, 0.3);
   }
+
+  .liquid-glass-button {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .liquid-glass-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(135deg, #FF5F1F 0%, #FF8F5F 100%);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+
+  .liquid-glass-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(255, 95, 31, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+  }
   
   .portfolio-card {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -172,6 +199,11 @@
       box-shadow: 0 10px 20px rgba(255, 95, 31, 0.2);
     }
     
+    .liquid-glass-button:hover {
+      transform: none;
+      box-shadow: 0 10px 20px rgba(255, 95, 31, 0.1);
+    }
+    
     .portfolio-card:hover {
       transform: translateY(-4px) scale(1.01);
     }
@@ -179,6 +211,11 @@
     /* Disable hover effects on mobile */
     @media (hover: none) and (pointer: coarse) {
       .gradient-button:hover {
+        transform: none;
+        box-shadow: none;
+      }
+      
+      .liquid-glass-button:hover {
         transform: none;
         box-shadow: none;
       }

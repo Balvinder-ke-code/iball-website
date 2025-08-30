@@ -9,6 +9,16 @@ export default function HeroSection() {
     }
   };
 
+  const handleContact = () => {
+    const contactSection = document.querySelector('#contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden" data-testid="hero-section">
       {/* Background gradient overlay */}
@@ -25,13 +35,22 @@ export default function HeroSection() {
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-4" data-testid="hero-description">
             Crafting visually stunning designs that tell stories, build brands, and create memorable experiences through the power of visual communication.
           </p>
-          <button 
-            className="gradient-button px-6 sm:px-8 py-3 sm:py-4 rounded-full text-primary-foreground font-semibold text-base sm:text-lg shadow-lg"
-            onClick={handleViewWork}
-            data-testid="button-view-work"
-          >
-            View My Work
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <button 
+              className="liquid-glass-button px-6 sm:px-8 py-3 sm:py-4 rounded-full text-foreground font-semibold text-base sm:text-lg shadow-lg"
+              onClick={handleViewWork}
+              data-testid="button-view-work"
+            >
+              View My Work
+            </button>
+            <button 
+              className="gradient-button px-6 sm:px-8 py-3 sm:py-4 rounded-full text-primary-foreground font-semibold text-base sm:text-lg shadow-lg"
+              onClick={handleContact}
+              data-testid="button-contact"
+            >
+              Contact
+            </button>
+          </div>
         </div>
       </div>
       
