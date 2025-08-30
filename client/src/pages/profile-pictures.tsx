@@ -1,6 +1,12 @@
 import { Link } from "wouter";
+import { useEffect } from "react";
 
 export default function ProfilePictures() {
+  
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   // Handle back navigation with scroll restoration
   const handleBackClick = () => {
