@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "git add . && git commit -m 'Deploy' && git push origin main"
-  }
-
+  },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
     "@jridgewell/trace-mapping": "^0.3.25",
