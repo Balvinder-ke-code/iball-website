@@ -157,8 +157,14 @@
     }
     
     /* Ensure proper touch scrolling */
-    .overflow-x-hidden {
+    .overflow-x-auto, .overflow-x-hidden {
       -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+    
+    /* Mobile testimonial scrolling */
+    .overflow-x-auto::-webkit-scrollbar {
+      display: none;
     }
     
     /* Improve tap targets */

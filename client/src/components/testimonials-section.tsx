@@ -96,35 +96,35 @@ export default function TestimonialsSection() {
         </div>
         
         <div className="relative">
-          {/* Left Arrow */}
+          {/* Left Arrow - Desktop Only */}
           <button 
             onClick={scrollLeft}
-            className={`absolute left-1 sm:left-0 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 sm:w-12 sm:h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
+            className={`hidden md:block absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
               canScrollLeft ? 'opacity-100' : 'opacity-30 cursor-not-allowed'
             }`}
             data-testid="scroll-left-button"
           >
-            <i className="fas fa-chevron-left text-primary-foreground text-xs sm:text-base"></i>
+            <i className="fas fa-chevron-left text-primary-foreground"></i>
           </button>
 
-          {/* Right Arrow */}
+          {/* Right Arrow - Desktop Only */}
           <button 
             onClick={scrollRight}
-            className={`absolute right-1 sm:right-0 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 sm:w-12 sm:h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
+            className={`hidden md:block absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
               canScrollRight ? 'opacity-100' : 'opacity-30 cursor-not-allowed'
             }`}
             data-testid="scroll-right-button"
           >
-            <i className="fas fa-chevron-right text-primary-foreground text-xs sm:text-base"></i>
+            <i className="fas fa-chevron-right text-primary-foreground"></i>
           </button>
 
           {/* Scrollable Container */}
           <div 
             ref={scrollRef}
-            className="overflow-x-hidden overflow-y-visible pb-4"
+            className="overflow-x-auto md:overflow-x-hidden overflow-y-visible pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            <div className="flex space-x-4 sm:space-x-6 px-12 sm:px-16" style={{ width: 'max-content' }}>
+            <div className="flex space-x-4 sm:space-x-6 px-4 md:px-16" style={{ width: 'max-content' }}>
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="fade-in glass-morphism rounded-2xl overflow-visible flex-shrink-0 w-72 sm:w-80" data-testid={`testimonial-card-${index}`}>
                   <img 
