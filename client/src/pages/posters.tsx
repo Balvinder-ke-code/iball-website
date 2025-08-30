@@ -29,7 +29,7 @@ export default function Posters() {
 
         {/* Image Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {Array.from({ length: 9 }, (_, index) => (
+          {Array.from({ length: 3 }, (_, index) => (
             <div key={index} className="glass-morphism rounded-2xl overflow-hidden group" data-testid={`poster-placeholder-${index}`}>
               <div className="aspect-[3/4] bg-secondary flex items-center justify-center border-2 border-dashed border-muted-foreground/30">
                 <div className="text-center">
