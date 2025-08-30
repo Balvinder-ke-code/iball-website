@@ -36,7 +36,7 @@ export default function Navigation() {
         <i className={`fas ${isHeaderVisible ? 'fa-times' : 'fa-bars'} text-primary-foreground`}></i>
       </button>
       
-      <nav className={`fixed top-2 sm:top-4 left-1/2 transform -translate-x-1/2 z-40 glass-morphism rounded-full px-4 sm:px-6 w-[95%] max-w-4xl transition-all duration-300 ${isHeaderVisible ? 'block' : 'hidden md:block'}}`} data-testid="navigation">
+      <nav className={`fixed top-2 sm:top-4 left-1/2 transform -translate-x-1/2 z-40 glass-morphism rounded-full px-4 sm:px-6 w-[95%] max-w-4xl transition-all duration-300 ${isHeaderVisible ? 'block' : 'hidden'} md:block`} data-testid="navigation">
       <div className="mx-auto px-2 lg:px-4">
         <div className="flex justify-center items-center h-12 sm:h-16">
           {/* Desktop Menu */}
