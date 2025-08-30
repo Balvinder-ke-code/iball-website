@@ -21,10 +21,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4" data-testid="footer-services-title">Services</h4>
             <ul className="space-y-2">
-              <li><span className="text-muted-foreground" data-testid="service-branding">Brand Identity</span></li>
-              <li><span className="text-muted-foreground" data-testid="service-ui-ux">UI/UX Design</span></li>
-              <li><span className="text-muted-foreground" data-testid="service-print">Print Design</span></li>
-              <li><span className="text-muted-foreground" data-testid="service-digital">Digital Marketing</span></li>
+              <li><span className="text-muted-foreground" data-testid="service-thumbnail">Thumbnail Design</span></li>
+              <li><span className="text-muted-foreground" data-testid="service-poster">Digital Poster</span></li>
+              <li><span className="text-muted-foreground" data-testid="service-pfp">PFP Design</span></li>
             </ul>
           </div>
         </div>
