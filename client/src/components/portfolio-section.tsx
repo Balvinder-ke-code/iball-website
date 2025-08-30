@@ -1,6 +1,23 @@
 import { Link } from "wouter";
+import { useEffect } from "react";
 
 export default function PortfolioSection() {
+  
+  // Restore scroll position when returning to this page
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem('portfolioScrollPosition');
+    if (savedScrollPosition) {
+      setTimeout(() => {
+        window.scrollTo(0, parseInt(savedScrollPosition));
+        sessionStorage.removeItem('portfolioScrollPosition');
+      }, 100);
+    }
+  }, []);
+
+  // Save scroll position when clicking on portfolio items
+  const handlePortfolioClick = () => {
+    sessionStorage.setItem('portfolioScrollPosition', window.scrollY.toString());
+  };
   const portfolioItems = [
     {
       title: "Youtube Thumbnail",
@@ -38,7 +55,11 @@ export default function PortfolioSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {portfolioItems.map((item, index) => (
             <Link key={index} href={item.link}>
-              <div className="fade-in portfolio-card glass-morphism rounded-2xl overflow-hidden group cursor-pointer" data-testid={`portfolio-item-${index}`}>
+              <div 
+                className="fade-in portfolio-card glass-morphism rounded-2xl overflow-hidden group cursor-pointer" 
+                data-testid={`portfolio-item-${index}`}
+                onClick={handlePortfolioClick}
+              >
                 <img 
                   src={item.image} 
                   alt={item.title} 

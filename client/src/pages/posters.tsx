@@ -1,12 +1,17 @@
 import { Link } from "wouter";
 
 export default function Posters() {
+  
+  // Handle back navigation with scroll restoration
+  const handleBackClick = () => {
+    // Let the navigation happen naturally, scroll position will be restored by PortfolioSection
+  };
   return (
     <div className="min-h-screen pt-24 pb-12 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <Link href="/" className="text-accent hover:text-accent/80 mb-4 inline-flex items-center">
+          <Link href="/" className="text-accent hover:text-accent/80 mb-4 inline-flex items-center" onClick={handleBackClick}>
             <i className="fas fa-arrow-left mr-2"></i>
             Back to Portfolio
           </Link>
