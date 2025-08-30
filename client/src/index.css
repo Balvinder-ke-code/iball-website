@@ -127,4 +127,9 @@
   .overflow-x-hidden::-webkit-scrollbar {
     display: none;
   }
+  
+  /* Prevent vertical scrolling in testimonial cards */
+  .overflow-x-hidden {
+    overflow-y: visible !important;
+  }
 }

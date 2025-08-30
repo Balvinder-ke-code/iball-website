@@ -91,12 +91,12 @@ export default function TestimonialsSection() {
           {/* Scrollable Container */}
           <div 
             ref={scrollRef}
-            className="overflow-x-hidden pb-4"
+            className="overflow-x-hidden overflow-y-visible pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             <div className="flex space-x-6 px-16" style={{ width: 'max-content' }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="fade-in glass-morphism rounded-2xl overflow-hidden flex-shrink-0 w-80" data-testid={`testimonial-card-${index}`}>
+                <div key={index} className="fade-in glass-morphism rounded-2xl overflow-visible flex-shrink-0 w-80" data-testid={`testimonial-card-${index}`}>
                   <img 
                     src={testimonial.image} 
                     alt={testimonial.name} 
