@@ -6,7 +6,7 @@ export default function TestimonialsSection() {
   const scrollLeft = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: -320,
+        left: -640,
         behavior: 'smooth'
       });
     }
@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
   const scrollRight = () => {
     if (scrollRef.current) {
       scrollRef.current.scrollBy({
-        left: 320,
+        left: 640,
         behavior: 'smooth'
       });
     }
