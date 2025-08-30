@@ -27,8 +27,10 @@ export default function TestimonialsSection() {
 
   const scrollLeft = () => {
     if (scrollRef.current && canScrollLeft) {
+      const isMobile = window.innerWidth < 768;
+      const scrollAmount = isMobile ? 280 : 640;
       scrollRef.current.scrollBy({
-        left: -640,
+        left: -scrollAmount,
         behavior: 'smooth'
       });
     }
@@ -36,8 +38,10 @@ export default function TestimonialsSection() {
 
   const scrollRight = () => {
     if (scrollRef.current && canScrollRight) {
+      const isMobile = window.innerWidth < 768;
+      const scrollAmount = isMobile ? 280 : 640;
       scrollRef.current.scrollBy({
-        left: 640,
+        left: scrollAmount,
         behavior: 'smooth'
       });
     }
@@ -84,9 +88,9 @@ export default function TestimonialsSection() {
   return (
     <section className="py-20 bg-background" data-testid="testimonials-section">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-5xl font-bold mb-6 gradient-text" data-testid="testimonials-title">Trusted by Top Creators</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="testimonials-description">
+        <div className="text-center mb-12 sm:mb-16 fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 gradient-text" data-testid="testimonials-title">Trusted by Top Creators</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4" data-testid="testimonials-description">
             See what successful creators are saying about working with iBall
           </p>
         </div>
@@ -95,23 +99,23 @@ export default function TestimonialsSection() {
           {/* Left Arrow */}
           <button 
             onClick={scrollLeft}
-            className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
+            className={`absolute left-1 sm:left-0 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 sm:w-12 sm:h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
               canScrollLeft ? 'opacity-100' : 'opacity-30 cursor-not-allowed'
             }`}
             data-testid="scroll-left-button"
           >
-            <i className="fas fa-chevron-left text-primary-foreground"></i>
+            <i className="fas fa-chevron-left text-primary-foreground text-xs sm:text-base"></i>
           </button>
 
           {/* Right Arrow */}
           <button 
             onClick={scrollRight}
-            className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
+            className={`absolute right-1 sm:right-0 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 sm:w-12 sm:h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
               canScrollRight ? 'opacity-100' : 'opacity-30 cursor-not-allowed'
             }`}
             data-testid="scroll-right-button"
           >
-            <i className="fas fa-chevron-right text-primary-foreground"></i>
+            <i className="fas fa-chevron-right text-primary-foreground text-xs sm:text-base"></i>
           </button>
 
           {/* Scrollable Container */}
@@ -120,21 +124,21 @@ export default function TestimonialsSection() {
             className="overflow-x-hidden overflow-y-visible pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
-            <div className="flex space-x-6 px-16" style={{ width: 'max-content' }}>
+            <div className="flex space-x-4 sm:space-x-6 px-12 sm:px-16" style={{ width: 'max-content' }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="fade-in glass-morphism rounded-2xl overflow-visible flex-shrink-0 w-80" data-testid={`testimonial-card-${index}`}>
+                <div key={index} className="fade-in glass-morphism rounded-2xl overflow-visible flex-shrink-0 w-72 sm:w-80" data-testid={`testimonial-card-${index}`}>
                   <img 
                     src={testimonial.image} 
                     alt={testimonial.name} 
-                    className="w-full h-48 object-cover"
+                    className="w-full h-40 sm:h-48 object-cover"
                     data-testid={`testimonial-image-${index}`}
                   />
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6">
                     <div className="flex items-center mb-3">
-                      <h3 className="text-lg font-semibold mr-2" data-testid={`testimonial-name-${index}`}>{testimonial.name}</h3>
-                      <span className="text-accent text-sm" data-testid={`testimonial-role-${index}`}>• {testimonial.role}</span>
+                      <h3 className="text-base sm:text-lg font-semibold mr-2" data-testid={`testimonial-name-${index}`}>{testimonial.name}</h3>
+                      <span className="text-accent text-xs sm:text-sm" data-testid={`testimonial-role-${index}`}>• {testimonial.role}</span>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed mb-4" data-testid={`testimonial-comment-${index}`}>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4" data-testid={`testimonial-comment-${index}`}>
                       "{testimonial.comment}"
                     </p>
                     <div className="flex">

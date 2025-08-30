@@ -52,20 +52,20 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background" data-testid="contact-section">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-5xl font-bold mb-6 gradient-text" data-testid="contact-title">Let's Work Together</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="contact-description">
+    <section id="contact" className="py-12 sm:py-20 bg-background" data-testid="contact-section">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16 fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 gradient-text" data-testid="contact-title">Let's Work Together</h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4" data-testid="contact-description">
             Ready to bring your vision to life? Let's discuss your next project and create something amazing.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16">
           <div className="fade-in">
-            <div className="glass-morphism p-8 rounded-2xl">
-              <h3 className="text-2xl font-semibold mb-6" data-testid="contact-form-title">Get In Touch</h3>
-              <form className="space-y-6" onSubmit={handleSubmit}>
+            <div className="glass-morphism p-6 sm:p-8 rounded-2xl">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6" data-testid="contact-form-title">Get In Touch</h3>
+              <form className="space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Name</label>
                   <input 
@@ -74,7 +74,7 @@ export default function ContactSection() {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="apple-input w-full px-4 py-3 rounded-lg text-foreground placeholder-muted-foreground" 
+                    className="apple-input w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg text-foreground placeholder-muted-foreground" 
                     placeholder="Your full name"
                     required 
                     data-testid="input-name"
@@ -88,7 +88,7 @@ export default function ContactSection() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="apple-input w-full px-4 py-3 rounded-lg text-foreground placeholder-muted-foreground" 
+                    className="apple-input w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg text-foreground placeholder-muted-foreground" 
                     placeholder="your.email@example.com"
                     required 
                     data-testid="input-email"
@@ -102,7 +102,7 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={5} 
-                    className="apple-input w-full px-4 py-3 rounded-lg text-foreground placeholder-muted-foreground" 
+                    className="apple-input w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg text-foreground placeholder-muted-foreground" 
                     placeholder="Tell me about your project..."
                     required
                     data-testid="textarea-message"
@@ -111,7 +111,7 @@ export default function ContactSection() {
                 <button 
                   type="submit" 
                   disabled={contactMutation.isPending}
-                  className="gradient-button w-full py-4 rounded-lg text-primary-foreground font-semibold shadow-lg disabled:opacity-50"
+                  className="gradient-button w-full py-3 sm:py-4 text-sm sm:text-base rounded-lg text-primary-foreground font-semibold shadow-lg disabled:opacity-50"
                   data-testid="button-submit"
                 >
                   {contactMutation.isPending ? 'Sending...' : 'Send Message'}
@@ -121,41 +121,41 @@ export default function ContactSection() {
           </div>
           
           <div className="fade-in">
-            <div className="space-y-8">
-              <div className="flex items-center space-x-4" data-testid="contact-email">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                  <i className="fas fa-envelope text-primary-foreground"></i>
+            <div className="space-y-6 sm:space-y-8">
+              <div className="flex items-center space-x-3 sm:space-x-4" data-testid="contact-email">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className="fas fa-envelope text-primary-foreground text-sm sm:text-base"></i>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground">iball93designs@gmail.com</p>
+                  <h4 className="font-semibold text-sm sm:text-base">Email</h4>
+                  <p className="text-muted-foreground text-sm sm:text-base break-all">iball93designs@gmail.com</p>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4" data-testid="contact-location">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                  <i className="fas fa-map-marker-alt text-primary-foreground"></i>
+              <div className="flex items-center space-x-3 sm:space-x-4" data-testid="contact-location">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent rounded-full flex items-center justify-center flex-shrink-0">
+                  <i className="fas fa-map-marker-alt text-primary-foreground text-sm sm:text-base"></i>
                 </div>
                 <div>
-                  <h4 className="font-semibold">Location</h4>
-                  <p className="text-muted-foreground">India</p>
+                  <h4 className="font-semibold text-sm sm:text-base">Location</h4>
+                  <p className="text-muted-foreground text-sm sm:text-base">India</p>
                 </div>
               </div>
               
-              <div className="pt-8">
-                <h4 className="font-semibold mb-4">Follow Me</h4>
-                <div className="flex space-x-4">
-                  <a href="#" className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-behance">
-                    <i className="fab fa-behance"></i>
+              <div className="pt-6 sm:pt-8">
+                <h4 className="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Follow Me</h4>
+                <div className="flex space-x-3 sm:space-x-4 flex-wrap gap-2">
+                  <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-behance">
+                    <i className="fab fa-behance text-sm sm:text-base"></i>
                   </a>
-                  <a href="#" className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-pinterest">
-                    <i className="fab fa-pinterest"></i>
+                  <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-pinterest">
+                    <i className="fab fa-pinterest text-sm sm:text-base"></i>
                   </a>
-                  <a href="#" className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-instagram">
-                    <i className="fab fa-instagram"></i>
+                  <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-instagram">
+                    <i className="fab fa-instagram text-sm sm:text-base"></i>
                   </a>
-                  <a href="#" className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-linkedin">
-                    <i className="fab fa-linkedin"></i>
+                  <a href="#" className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-linkedin">
+                    <i className="fab fa-linkedin text-sm sm:text-base"></i>
                   </a>
                 </div>
               </div>

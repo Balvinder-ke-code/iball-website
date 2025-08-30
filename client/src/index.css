@@ -132,4 +132,39 @@
   .overflow-x-hidden {
     overflow-y: visible !important;
   }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .gradient-button:hover {
+      transform: none;
+      box-shadow: 0 10px 20px rgba(255, 95, 31, 0.2);
+    }
+    
+    .portfolio-card:hover {
+      transform: translateY(-4px) scale(1.01);
+    }
+    
+    /* Disable hover effects on mobile */
+    @media (hover: none) and (pointer: coarse) {
+      .gradient-button:hover {
+        transform: none;
+        box-shadow: none;
+      }
+      
+      .portfolio-card:hover {
+        transform: none;
+      }
+    }
+    
+    /* Ensure proper touch scrolling */
+    .overflow-x-hidden {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Improve tap targets */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
 }
