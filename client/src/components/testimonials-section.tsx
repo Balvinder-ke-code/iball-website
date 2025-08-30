@@ -1,10 +1,32 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function TestimonialsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScrollButtons = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 1);
+    }
+  };
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', checkScrollButtons);
+      checkScrollButtons(); // Check initial state
+      
+      return () => {
+        scrollContainer.removeEventListener('scroll', checkScrollButtons);
+      };
+    }
+  }, []);
 
   const scrollLeft = () => {
-    if (scrollRef.current) {
+    if (scrollRef.current && canScrollLeft) {
       scrollRef.current.scrollBy({
         left: -640,
         behavior: 'smooth'
@@ -13,7 +35,7 @@ export default function TestimonialsSection() {
   };
 
   const scrollRight = () => {
-    if (scrollRef.current) {
+    if (scrollRef.current && canScrollRight) {
       scrollRef.current.scrollBy({
         left: 640,
         behavior: 'smooth'
@@ -73,7 +95,9 @@ export default function TestimonialsSection() {
           {/* Left Arrow */}
           <button 
             onClick={scrollLeft}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-colors"
+            className={`absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
+              canScrollLeft ? 'opacity-100' : 'opacity-30 cursor-not-allowed'
+            }`}
             data-testid="scroll-left-button"
           >
             <i className="fas fa-chevron-left text-primary-foreground"></i>
@@ -82,7 +106,9 @@ export default function TestimonialsSection() {
           {/* Right Arrow */}
           <button 
             onClick={scrollRight}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-colors"
+            className={`absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-accent rounded-full flex items-center justify-center shadow-lg hover:bg-accent/90 transition-all duration-300 ${
+              canScrollRight ? 'opacity-100' : 'opacity-30 cursor-not-allowed'
+            }`}
             data-testid="scroll-right-button"
           >
             <i className="fas fa-chevron-right text-primary-foreground"></i>
