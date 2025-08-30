@@ -128,17 +128,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Email</h4>
-                  <p className="text-muted-foreground">hello@iball.design</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-4" data-testid="contact-phone">
-                <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-                  <i className="fas fa-phone text-primary-foreground"></i>
-                </div>
-                <div>
-                  <h4 className="font-semibold">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">iball93designs@gmail.com</p>
                 </div>
               </div>
               
@@ -148,7 +138,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">India</p>
                 </div>
               </div>
               
@@ -158,8 +148,8 @@ export default function ContactSection() {
                   <a href="#" className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-behance">
                     <i className="fab fa-behance"></i>
                   </a>
-                  <a href="#" className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-dribbble">
-                    <i className="fab fa-dribbble"></i>
+                  <a href="#" className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-pinterest">
+                    <i className="fab fa-pinterest"></i>
                   </a>
                   <a href="#" className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition-colors" data-testid="social-instagram">
                     <i className="fab fa-instagram"></i>
