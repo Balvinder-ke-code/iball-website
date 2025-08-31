@@ -30,7 +30,7 @@ export default function PortfolioSection() {
       title: "Poster",
       description: "Creative poster designs for events and promotions",
       category: "PRINT DESIGN",
-      image: "https://pixabay.com/get/g5bbd268703585f807ff48dd4607608554841d1b00877a41de64f334690e8a1a577005b697799dac4b01e2786b123f1d1865a792069b4a49a96449139bc51e5bc_1280.jpg",
+      image: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756626170/madara_red_poster_pgd2bp.png",
       link: "/posters"
     },
     {
