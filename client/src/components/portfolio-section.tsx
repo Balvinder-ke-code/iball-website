@@ -23,7 +23,7 @@ export default function PortfolioSection() {
       title: "Youtube Thumbnail",
       description: "Eye-catching thumbnails that boost click-through rates",
       category: "DIGITAL DESIGN",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      image: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611865/sunraybee_thumbnail_remake_cvvah9.png",
       link: "/youtube-thumbnails"
     },
     {
