@@ -12,6 +12,7 @@ export default function YoutubeThumbnails() {
     "/public/images/thumbnails/thumb1.webp",
     "/images/thumbnails/thumb2.webp",
     "/images/thumbnails/thumb3.webp",
+    "public/images/thumbnails/a-modern-logo-design-featuring-the-text-_qa4yAesETLqHcSjlt-xSvA_fvEcDbyQQSCDO8sdkFuHrA.png"
   ];
 
   return (
