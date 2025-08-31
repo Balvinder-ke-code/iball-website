@@ -37,7 +37,7 @@ export default function PortfolioSection() {
       title: "Profile Pictures",
       description: "Professional profile pictures and avatar designs",
       category: "PORTRAIT DESIGN",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+      image: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756632789/Anup_Logo_pyeqo9.webp",
       link: "/profile-pictures"
     }
   ];
