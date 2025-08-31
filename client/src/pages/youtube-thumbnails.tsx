@@ -9,10 +9,9 @@ export default function YoutubeThumbnails() {
 
   // Array of your thumbnails (replace with your actual image filenames)
   const thumbnails = [
-    "/public/images/thumbnails/thumb1.webp",
-    "/images/thumbnails/thumb2.webp",
-    "/images/thumbnails/thumb3.webp",
-    "https://res.cloudinary.com/durgkvgwa/image/upload/image_duz6lj.png",
+    "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611860/DBC_poster_tn_aeag4v.png",
+    "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611865/sunraybee_thumbnail_remake_cvvah9.png",
+    "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611872/Umamusume_tn_wojuqn.png",
   ];
 
   return (
