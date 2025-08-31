@@ -12,6 +12,7 @@ export default function YoutubeThumbnails() {
     "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611860/DBC_poster_tn_aeag4v.png",
     "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611865/sunraybee_thumbnail_remake_cvvah9.png",
     "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611872/Umamusume_tn_wojuqn.png",
+    "https://res.cloudinary.com/durgkvgwa/image/upload/v1756612499/MrPfx_professional_thumbnail_1_rg7llr.png",
   ];
 
   return (
