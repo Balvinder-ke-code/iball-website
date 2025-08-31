@@ -21,7 +21,7 @@ export default function PortfolioSection() {
   const portfolioItems = [
     {
       title: "Youtube Thumbnail",
-      description: "Eye-catching thumbnails that boost click-through rates",
+      description: "High CTR and professional Youtube Thumbnails",
       category: "DIGITAL DESIGN",
       image: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611865/sunraybee_thumbnail_remake_cvvah9.png",
       link: "/youtube-thumbnails"
