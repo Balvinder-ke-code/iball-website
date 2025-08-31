@@ -9,7 +9,7 @@ export default function YoutubeThumbnails() {
 
   // Array of your thumbnails (replace with your actual image filenames)
   const thumbnails = [
-    "public/images/thumbnails/thumb1.webp",
+    "/public/images/thumbnails/thumb1.webp",
     "/images/thumbnails/thumb2.webp",
     "/images/thumbnails/thumb3.webp",
   ];
