@@ -29,6 +29,13 @@ export default function YoutubeThumbnails() {
       channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756917604/redshell_pfp_jgbcpj.webp",
       link: "https://youtu.be/0sFFWP2vdNw?si=vIzVSmOSSVwptNtf",
     },
+    {
+      src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914514/MrPfx_professional_thumbnail_1_mn2uop.webp",
+      title: "How To Trade Forex In 7 Minutes For Beginners",
+      channelName: "Mr P Fx",
+      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756920314/mrpfx_pfp_xrctcf.webp",
+      link: "",
+    },
   ];
 
   return (
