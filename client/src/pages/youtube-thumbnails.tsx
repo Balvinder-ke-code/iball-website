@@ -10,24 +10,24 @@ export default function YoutubeThumbnails() {
   const thumbnails = [
     {
       src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756913964/DBC_poster_tn_cbzpyp.webp",
-      title: "Dragon Ball Classic Poster",
-      channelName: "KKCreate",
-      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1757000000/kkcreate-pfp.webp",
-      link: "https://youtube.com/watch?v=XXXX",
+      title: "I asked my viewers to make FAKE movies posters and they 𝘾𝙊𝙊𝙆𝙀𝘿 🔥",
+      channelName: "Redshell",
+      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756917604/redshell_pfp_jgbcpj.webp",
+      link: "https://youtu.be/0sFFWP2vdNw?si=vIzVSmOSSVwptNtf",
     },
     {
       src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914548/sunraybee_thumbnail_remake_bg6c1l.webp",
       title: "Sunraybee Thumbnail Remake",
-      channelName: "Mohakmangal",
-      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1757000000/mohak-pfp.webp",
-      link: "https://youtube.com/watch?v=YYYY",
+      channelName: "SunRayBee Live",
+      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756917944/sunraybee_pfp_h0uloe.webp",
+      link: "",
     },
     {
       src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914337/Umamusume_tn_xl0xqc.webp",
-      title: "Umamusume Highlight Reel",
-      channelName: "AnimeZone",
-      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1757000000/animezone-pfp.webp",
-      link: "#",
+      title: "I asked my viewers to make FAKE movies posters and they 𝘾𝙊𝙊𝙆𝙀𝘿 🔥",
+      channelName: "Redshell",
+      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756917604/redshell_pfp_jgbcpj.webp",
+      link: "https://youtu.be/0sFFWP2vdNw?si=vIzVSmOSSVwptNtf",
     },
   ];
 
