@@ -17,10 +17,10 @@ export default function YoutubeThumbnails() {
     },
     {
       src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914548/sunraybee_thumbnail_remake_bg6c1l.webp",
-      title: "Sunraybee Thumbnail Remake",
+      title: "Arjun Kapoor Attitude 💔",
       channelName: "SunRayBee Live",
       channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756917944/sunraybee_pfp_h0uloe.webp",
-      link: "",
+      link: "https://youtu.be/OmN4r7m8rtw?si=MT87SCqX8zaRzeBS",
     },
     {
       src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914337/Umamusume_tn_xl0xqc.webp",
