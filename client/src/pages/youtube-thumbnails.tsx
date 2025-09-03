@@ -77,7 +77,7 @@ export default function YoutubeThumbnails() {
                 />
                 {/* Title + Channel */}
                 <div>
-                  <h3 className="font-semibold text-lg leading-tight">
+                  <h3 className="font-semibold text-lg whitespace-nowrap overflow-hidden text-ellipsis">
                     {thumb.title}
                   </h3>
                   <p className="text-muted-foreground text-sm">
