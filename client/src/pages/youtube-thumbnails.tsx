@@ -2,17 +2,33 @@ import { Link } from "wouter";
 import { useEffect } from "react";
 
 export default function YoutubeThumbnails() {
-  // Scroll to top when page loads
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Array of your thumbnails (replace with your actual image filenames)
+  // Array of thumbnails with metadata
   const thumbnails = [
-    "https://res.cloudinary.com/durgkvgwa/image/upload/v1756913964/DBC_poster_tn_cbzpyp.webp",
-    "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914548/sunraybee_thumbnail_remake_bg6c1l.webp",
-    "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914337/Umamusume_tn_xl0xqc.webp",
-    "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914514/MrPfx_professional_thumbnail_1_mn2uop.webp",
+    {
+      src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756913964/DBC_poster_tn_cbzpyp.webp",
+      title: "Dragon Ball Classic Poster",
+      channelName: "KKCreate",
+      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1757000000/kkcreate-pfp.webp",
+      link: "https://youtube.com/watch?v=XXXX",
+    },
+    {
+      src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914548/sunraybee_thumbnail_remake_bg6c1l.webp",
+      title: "Sunraybee Thumbnail Remake",
+      channelName: "Mohakmangal",
+      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1757000000/mohak-pfp.webp",
+      link: "https://youtube.com/watch?v=YYYY",
+    },
+    {
+      src: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914337/Umamusume_tn_xl0xqc.webp",
+      title: "Umamusume Highlight Reel",
+      channelName: "AnimeZone",
+      channelPic: "https://res.cloudinary.com/durgkvgwa/image/upload/v1757000000/animezone-pfp.webp",
+      link: "#",
+    },
   ];
 
   return (
@@ -27,37 +43,47 @@ export default function YoutubeThumbnails() {
             <i className="fas fa-arrow-left mr-2"></i>
             Back to Portfolio
           </Link>
-          <h1
-            className="text-5xl font-bold gradient-text mb-4"
-            data-testid="page-title"
-          >
+          <h1 className="text-5xl font-bold gradient-text mb-4">
             Youtube Thumbnails
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Eye-catching thumbnails designed to boost click-through rates and
-            grow your channel
+            Eye-catching thumbnails designed for YouTube creators
           </p>
         </div>
 
-        {/* Image Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {thumbnails.map((src, index) => (
+        {/* Thumbnail Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {thumbnails.map((thumb, index) => (
             <div
               key={index}
-              className="glass-morphism rounded-2xl overflow-hidden group"
+              className="rounded-xl overflow-hidden bg-card shadow-md hover:shadow-xl transition"
             >
-              <img
-                src={src}
-                alt={`Thumbnail ${index + 1}`}
-                className="w-full h-auto aspect-video object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2">
-                  Thumbnail Design {index + 1}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Custom thumbnail for YouTube video
-                </p>
+              {/* Thumbnail */}
+              <a href={thumb.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={thumb.src}
+                  alt={thumb.title}
+                  className="w-full aspect-video object-cover"
+                />
+              </a>
+
+              {/* Info Section */}
+              <div className="flex items-start gap-3 p-4">
+                {/* Channel Profile */}
+                <img
+                  src={thumb.channelPic}
+                  alt={thumb.channelName}
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+                {/* Title + Channel */}
+                <div>
+                  <h3 className="font-semibold text-lg leading-tight">
+                    {thumb.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm">
+                    @{thumb.channelName}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
