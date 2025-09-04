@@ -23,7 +23,7 @@ export default function PortfolioSection() {
       title: "Youtube Thumbnail",
       description: "High CTR and professional Youtube Thumbnails",
       category: "DIGITAL DESIGN",
-      image: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756611865/sunraybee_thumbnail_remake_cvvah9.png",
+      image: "https://res.cloudinary.com/durgkvgwa/image/upload/v1756914548/sunraybee_thumbnail_remake_bg6c1l.webp",
       link: "/youtube-thumbnails"
     },
     {
