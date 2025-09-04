@@ -26,7 +26,7 @@ export default function HeroSection() {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6">
         <div className="fade-in">
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black mb-4 sm:mb-6" data-testid="hero-title">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black mb-4 sm:mb-6">
             <span className="gradient-text">iBall</span>
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-3 sm:mb-4 font-light" data-testid="hero-subtitle">
