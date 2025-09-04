@@ -126,7 +126,7 @@ export default function TestimonialsSection() {
           >
             <div className="flex space-x-4 sm:space-x-6 px-4 md:px-16" style={{ width: 'max-content' }}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="fade-in glass-morphism rounded-2xl overflow-visible flex-shrink-0 w-72 sm:w-80" data-testid={`testimonial-card-${index}`}>
+                <div key={index} className="fade-in glass-morphism rounded-2xl overflow-hidden flex-shrink-0 w-72 sm:w-80" data-testid={`testimonial-card-${index}`}>
                   <img 
                     src={testimonial.image} 
                     alt={testimonial.name} 
