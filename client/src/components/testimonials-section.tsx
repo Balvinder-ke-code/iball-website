@@ -121,7 +121,7 @@ export default function TestimonialsSection() {
           {/* Scrollable Container */}
           <div 
             ref={scrollRef}
-            className="overflow-x-auto md:overflow-x-hidden overflow-y-visible pb-4"
+            className="overflow-x-auto md:overflow-x-hidden overflow-y-hidden pb-4"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             <div className="flex space-x-4 sm:space-x-6 px-4 md:px-16" style={{ width: 'max-content' }}>
