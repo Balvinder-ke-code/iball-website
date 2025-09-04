@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-border pt-6 sm:pt-8 text-center">
-          <p className="text-xs sm:text-sm text-muted-foreground" data-testid="footer-copyright">© 2024 iBall. All rights reserved.</p>
+          <p className="text-xs sm:text-sm text-muted-foreground" data-testid="footer-copyright">© 2025 iBall. All rights reserved.</p>
         </div>
       </div>
     </footer>
